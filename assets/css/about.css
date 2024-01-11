@@ -1,0 +1,202 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    font-family: Raleway;
+    font-size: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    overflow: hidden;
+}
+
+section .air {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(https://1.bp.blogspot.com/-xQUc-TovqDk/XdxogmMqIRI/AAAAAAAACvI/AizpnE509UMGBcTiLJ58BC6iViPYGYQfQCLcBGAsYHQ/s1600/wave.png);
+    background-size: 1000px 100px;
+}
+
+section .air.air1 {
+    animation: wave 30s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+}
+
+section .air.air2 {
+    animation: wave2 15s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 10px;
+}
+
+section .air.air3 {
+    animation: wave 30s linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 15px;
+}
+
+section .air.air4 {
+    animation: wave2 5s linear infinite;
+    z-index: 997;
+    opacity: 0.7;
+    animation-delay: -5s;
+    bottom: 20px;
+}
+
+@keyframes wave {
+    0% {
+        background-position-x: 0px;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+@keyframes wave2 {
+    0% {
+        background-position-x: 0px;
+    }
+    100% {
+        background-position-x: -1000px;
+    }
+}
+
+h2,
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {}
+
+h2 {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #fff; /* Text color for A propos page */
+}
+
+hr {
+    margin: 15px 0;
+}
+
+.bg-dark {
+    background-color: black;
+}
+
+.bg-light {
+    background: hsla(231, 10%, 90%, 0.8);
+}
+
+.text-light {
+    color: #f0f0f0;
+}
+
+.align-center {
+    text-align: center;
+}
+
+div.container {
+    font-family: Raleway;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 15px;
+    justify-content: flex-end;
+    display: flex;
+}
+
+div.container a {
+    color: #FFF;
+    text-decoration: none;
+    font: 20px Raleway;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+
+/* Top and Bottom borders come in */
+div.topBotomBordersIn a:before,
+div.topBotomBordersIn a:after {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: #FFF;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+div.topBotomBordersIn a:before {
+    top: 0px;
+    transform: translateY(-10px);
+}
+
+div.topBotomBordersIn a:after {
+    bottom: 0px;
+    transform: translateY(10px);
+}
+
+div.topBotomBordersIn a:hover:before,
+div.topBotomBordersIn a:hover:after {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+#top-left-robot {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    color: white; /* Change text color for visibility during testing */
+    margin-top: 15px;
+    margin-left: 15px;
+    height: 15px;
+    width: 15px;
+}
+
+span.fas.fa-robot {
+    align-self: end;
+}
+
+.login-box {
+    width: 300px;
+    height: 78vh;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40%;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    font-size: large;
+}
